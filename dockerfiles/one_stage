@@ -1,0 +1,6 @@
+FROM ubuntu AS compiler
+RUN apt update -y
+RUN apt install -y build-essential
+COPY hello.c /
+RUN make hello
+CMD ["/hello"]
